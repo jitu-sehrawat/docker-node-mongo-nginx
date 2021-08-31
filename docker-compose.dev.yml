@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node-app:
+    build:
+      context: . # Dockerfile
+      args:
+        NODE_ENV: development
+    volumes:
+      - ./:/app # bind mount
+      - /app/node_modules # anonymous volume
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
