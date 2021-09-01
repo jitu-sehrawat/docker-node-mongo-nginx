@@ -10,4 +10,12 @@ services:
       - /app/node_modules # anonymous volume
     environment:
       - NODE_ENV=development
+      - MONGO_USER=root
+      - MONGO_PASSWORD=Cardekho123
+      - MONGO_IP=mongo
+      - MONGO_PORT=27017
     command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=Cardekho123
