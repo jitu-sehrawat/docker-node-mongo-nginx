@@ -1,9 +1,10 @@
 version: "3"
 services:
+  nginx:
+    image: nginx:stable-alpine
+
   node-app:
     build: .
-    ports:
-      - "3000:3000"
     environment:
       - PORT=3000
     depends_on:

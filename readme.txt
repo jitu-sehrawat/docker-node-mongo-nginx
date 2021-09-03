@@ -33,3 +33,6 @@
 8. docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 9. docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+
+# Scale node app to 2 instances
+10. docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
