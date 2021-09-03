@@ -58,3 +58,11 @@
 
 3. On VM, create .env file. Open .profile and write `set -o allexport; source /root/.env; set +o allexport;`.
    This will set the Env to VM. Use printenv to view all the variables.
+
+4. Clone Git repo to /app on VM.
+
+
+
+
+
+
