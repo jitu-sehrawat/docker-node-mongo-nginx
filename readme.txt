@@ -36,3 +36,25 @@
 
 # Scale node app to 2 instances
 10. docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
+
+
+
+
+## Production
+1. Make changes to prod.yml, for env variables from VM for node-app:
+  `environment:
+      - NODE_ENV=production
+      - MONGO_USER=${MONGO_USER}  # Env variables from Vm on which this docker will run.
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_IP=${MONGO_IP}
+      - MONGO_PORT=${MONGO_PORT}
+      - SESSION_SECRET=${SESSION_SECRET}`
+
+2.Make changes to prod.yml, for env variables from VM for mongo:
+ `mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}`
+
+3. On VM, create .env file. Open .profile and write `set -o allexport; source /root/.env; set +o allexport;`.
+   This will set the Env to VM. Use printenv to view all the variables.
