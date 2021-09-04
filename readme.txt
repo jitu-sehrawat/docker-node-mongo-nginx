@@ -84,5 +84,10 @@ USING DOCKER SWARM
 
 5. Usefull cmds
   - docker stack services myapp
+  - docker stack ps myapp
 
-6. Make changes to and deploy on service. 
+6. Make changes to and deploy on service.
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml push
+  - docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml myapp # This is 
+  auto download the new image and run container.
