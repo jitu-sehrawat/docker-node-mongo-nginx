@@ -64,7 +64,19 @@
 5. Push Image to dockerhub, first tag the image using:
   docker push jitusehrawat/docker-node-mongo-nginx_node-app
 
-6. 
+6. Make changes to code, build the image locally, push to hub, build the container on VM
+by pull the image first and running the container.
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml push
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+USING DOCKER SWARM
+1. Enable it.
+  docker swarm init --advertise-addr 128.199.30.187
+2. To use swarn cmds, use 'docker service' as starting ..
+
+3. 
 
 
 
