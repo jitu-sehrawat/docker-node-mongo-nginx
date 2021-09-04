@@ -61,7 +61,10 @@
 
 4. Clone Git repo to /app on VM.
 
+5. Push Image to dockerhub, first tag the image using:
+  docker push jitusehrawat/docker-node-mongo-nginx_node-app
 
+6. 
 
 
 

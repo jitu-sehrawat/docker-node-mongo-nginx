@@ -5,6 +5,7 @@ services:
 
   node-app:
     build: .
+    image: jitusehrawat/docker-node-mongo-nginx_node-app
     environment:
       - PORT=3000
     depends_on:
