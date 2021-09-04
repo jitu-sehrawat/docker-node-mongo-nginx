@@ -76,7 +76,8 @@ USING DOCKER SWARM
   docker swarm init --advertise-addr 128.199.30.187
 2. To use swarn cmds, use 'docker service' as starting ..
 
-3. 
+3. Tear down all the running container before deploy.
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
 
 
 

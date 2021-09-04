@@ -8,12 +8,12 @@ services:
 
   node-app:
     deploy:
-      replicas: 8
-      restart-policy:
-        condition: any
+      replicas: 6
       update_config:
         parallelism: 2
-        delay: 15s
+        delay: 10s
+      restart_policy:
+        condition: any
     build:
       context: . # Dockerfile
       args:
