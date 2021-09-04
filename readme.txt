@@ -78,7 +78,11 @@ USING DOCKER SWARM
 
 3. Tear down all the running container before deploy.
   docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
+4. deploy using swarn
+  - docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml myapp
+  # myapp is just name given to stack.
 
+5. Usefull cmds
+  - docker stack services myapp
 
-
-
+6. Make changes to and deploy on service. 

@@ -50,7 +50,7 @@ app.use(morgan('combined'));
 app.use(express.json());
 
 app.get(`/api/v1`, (req, res) => {
-  res.send(`<h2>Hi There !!!!!!!!!!!!!!!!<h2/> ${process.env.NODE_ENV}`)
+  res.send(`<h2>Hi Thereh2/> ${process.env.NODE_ENV}`)
 });
 app.use('/api/v1/posts', postRouter);
 app.use('/api/v1/users', userRouter);
